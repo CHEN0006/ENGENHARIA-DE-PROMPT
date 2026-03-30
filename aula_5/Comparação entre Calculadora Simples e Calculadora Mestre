@@ -1,0 +1,48 @@
+# 📊 Comparação entre Calculadora Simples e Calculadora Mestre
+
+## 🔹 Estrutura
+- **Calculadora Simples**
+  - Código linear, sem funções.
+  - Usa condicionais (`if/elif/else`) para decidir a operação.
+  - Executa apenas uma operação por vez.
+
+- **Calculadora Mestre**
+  - Organizada em funções (`soma`, `subtracao`, etc.).
+  - Possui loop (`while True`) que permite várias operações até o usuário sair.
+  - Mais modular e reutilizável.
+
+---
+
+## 🔹 Legibilidade e Manutenção
+- **Simples**: Fácil de entender para iniciantes, mas pouco escalável.  
+- **Mestre**: Estrutura clara e organizada, facilita manutenção e expansão.
+
+---
+
+## 🔹 Tratamento de Erros
+- **Simples**: Apenas verifica divisão por zero.  
+- **Mestre**: Verifica divisão por zero **e** trata entradas inválidas com `try/except`.
+
+---
+
+## 🔹 Experiência do Usuário
+- **Simples**: Executa uma operação e termina.  
+- **Mestre**: Interface mais amigável, com menu de opções e possibilidade de repetir operações sem reiniciar.
+
+---
+
+## 🔹 Comparação Resumida
+
+| Aspecto              | Calculadora Simples | Calculadora Mestre |
+|-----------------------|---------------------|--------------------|
+| Estrutura             | Linear              | Modular (funções)  |
+| Reutilização          | Baixa               | Alta               |
+| Tratamento de erros   | Básico              | Completo           |
+| Interatividade        | Uma operação        | Loop com menu      |
+| Facilidade p/ iniciantes | Alta            | Média (mais conceitos) |
+
+---
+
+## 🔹 Conclusão
+- A **Calculadora Simples** é ideal para aprender lógica básica e condicionais.  
+- A **Calculadora Mestre** é mais robusta, profissional e escalável, adequada para projetos maiores ou para quem já domina o básico.
