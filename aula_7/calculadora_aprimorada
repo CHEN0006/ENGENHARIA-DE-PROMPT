@@ -1,0 +1,39 @@
+def soma(a: float, b: float) -> float:
+    """Retorna a soma de dois números."""
+    return a + b
+
+def subtracao(a: float, b: float) -> float:
+    """Retorna a subtração de dois números."""
+    return a - b
+
+def multiplicacao(a: float, b: float) -> float:
+    """Retorna a multiplicação de dois números."""
+    return a * b
+
+def divisao(a: float, b: float) -> float:
+    """Retorna a divisão de dois números, tratando divisão por zero."""
+    if b == 0:
+        raise ZeroDivisionError("Não é possível dividir por zero.")
+    return a / b
+
+def calculadora(operacao: str, a: float, b: float) -> float:
+    """Executa a operação matemática escolhida."""
+    operacoes = {
+        "soma": soma,
+        "subtracao": subtracao,
+        "multiplicacao": multiplicacao,
+        "divisao": divisao
+    }
+
+    funcao = operacoes.get(operacao.lower())
+    if funcao is None:
+        raise ValueError(f"Operação inválida: {operacao}")
+    return funcao(a, b)
+
+
+# Exemplo de uso:
+if __name__ == "__main__":
+    print("Soma:", calculadora("soma", 10, 5))             # 15
+    print("Subtração:", calculadora("subtracao", 10, 5))   # 5
+    print("Multiplicação:", calculadora("multiplicacao", 10, 5)) # 50
+    print("Divisão:", calculadora("divisao", 10, 5))       # 2.0
